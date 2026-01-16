@@ -1,0 +1,10 @@
+Online learning is an extreme form of stochastic gradient descent where the mini-batch size is just one. 
+This means the model updates its parameters after seeing each individual data point.
+
+The main advantage of online learning is fast adaptation. 
+Since the model learns from every new example immediately, it works very well with streaming data or situations where data keeps changing over time.
+
+However, online learning also has some drawbacks. 
+Because each update is based on only one example, the updates are noisy and less stable, causing the parameters to move in a more random way.
+Another disadvantage is that online learning does not effectively use vectorization. 
+With a batch size of one, the system performs many small computations instead of one large parallel computation. Since GPUs are designed to handle large batches efficiently, this makes training slower compared to using a mini-batch size like 20.
