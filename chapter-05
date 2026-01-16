@@ -1,0 +1,14 @@
+when the cost function depends on only one variable, we call it one-dimensional gradient descent.
+In this case, the cost function can be written as
+𝐶=𝐶(𝑥)
+
+Since there is only one variable, the gradient is not a vector. It is simply the derivative of the cost function,
+dx/dC
+
+This derivative represents the slope of the cost function curve at a particular point.
+
+*If the slope is positive, the cost increases towards the right, so we move left to reduce the cost.
+*If the slope is negative, the cost decreases towards the right, so we move right.
+*We keep updating the value until the slope becomes zero, which indicates the minimum of the cost function.
+
+So, in one dimension, gradient descent works by moving along the curve in the direction of decreasing slope until the minimum is reached.
