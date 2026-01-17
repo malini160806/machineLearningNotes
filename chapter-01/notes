@@ -124,4 +124,5 @@ Errors are propagated backward from the output layer
 
 Parameters are adjusted to reduce future error
 
+
 This combination of feedforward + backpropagation + gradient descent enables neural networks to learn effectively.
