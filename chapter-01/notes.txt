@@ -1,0 +1,127 @@
+Understanding Neural Networks
+
+Neural networks are inspired by the way the human brain processes information.
+They are computational models designed to learn patterns from data by passing information through interconnected layers of artificial neurons.
+
+Structure of a Neural Network
+
+A simple neural network is made up of three main layers:
+
+Input Layer
+Takes the raw data and feeds it into the network.
+
+Hidden Layer(s)
+Performs internal computations and learns patterns from the input.
+
+Output Layer
+Generates the final result or prediction.
+
+Core Components of a Neuron
+
+Each neuron processes information using the following elements:
+
+Inputs – values received from the previous layer
+
+Weights – determine the importance of each input
+
+Bias – shifts the activation threshold and controls when the neuron fires
+
+Activation Function – decides the final output of the neuron
+
+A neuron combines all inputs, applies weights and bias, and then checks whether the result is strong enough to pass forward.
+
+Conceptually, a neuron can behave like a logic gate (such as NAND), which means complex computations can be built by combining multiple neurons.
+
+Perceptron vs Sigmoid Neuron
+Perceptron
+
+Produces only binary outputs (0 or 1)
+
+Uses a hard threshold
+
+Even tiny changes in weights or bias can cause sudden output changes
+
+This makes smooth learning difficult
+
+Sigmoid Neuron
+
+Outputs values between 0 and 1
+
+Uses a smooth, continuous curve
+
+Small parameter changes lead to gradual output changes
+
+Enables stable and effective learning
+
+👉 This smooth behavior is why sigmoid (and similar functions) are preferred for training neural networks.
+
+Feedforward Process
+
+In feedforward operation:
+
+Data flows from input layer → hidden layer(s) → output layer
+
+Each layer’s output becomes the input for the next layer
+
+No learning happens here because weights and biases remain unchanged
+
+The network simply produces a prediction
+
+Vectorized Computation
+
+Processing neurons one at a time is inefficient.
+To improve performance:
+
+Inputs are treated as vectors
+
+Weights are treated as matrices
+
+This allows the network to compute entire layers in a single operation, making training faster and scalable.
+
+Learning with Gradient Descent
+
+Learning occurs using gradient descent, an optimization technique.
+
+A cost (loss) function measures how far the prediction is from the correct output
+
+The goal is to minimize this cost
+
+You can imagine the cost function like a landscape:
+
+Higher points = larger error
+
+Lowest point = minimum error
+
+The learning rate (η / eta) controls the step size:
+
+Too large → unstable learning
+
+Too small → very slow learning
+
+Proper tuning is essential
+
+Stochastic Gradient Descent (SGD)
+
+Using the entire dataset for every update (full gradient descent) is slow and memory-intensive.
+
+SGD improves efficiency by:
+
+Using small random portions of data
+
+Updating weights more frequently
+
+Speeding up convergence
+
+These small subsets are called mini-batches.
+
+Backpropagation
+
+Weight and bias updates are calculated using backpropagation.
+
+It determines how much each parameter contributed to the final error
+
+Errors are propagated backward from the output layer
+
+Parameters are adjusted to reduce future error
+
+This combination of feedforward + backpropagation + gradient descent enables neural networks to learn effectively.
